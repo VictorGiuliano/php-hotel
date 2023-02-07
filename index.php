@@ -49,6 +49,16 @@ $hotels = [
     <title>Hotel</title>
 </head>
 <body>
+    <ul>
+        <?php foreach($hotels as $index){
+            echo "<hr>";
+            foreach($index as $key => $hotel){
+                echo "<b>$key : </b>";
+                echo "$hotel <br>";
+            }
+        }
+        ?>
+    </ul>
     
 </body>
 </html>
