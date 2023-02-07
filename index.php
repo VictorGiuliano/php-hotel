@@ -1,6 +1,7 @@
 <?php
 $hotels = [
 
+
         [
             'name' => 'Hotel Belvedere',
             'description' => 'Hotel Belvedere Descrizione',
@@ -39,6 +40,13 @@ $hotels = [
 
     ];
 
+    /* foreach($hotels as $key => $index){
+        echo "<hr>";
+        foreach($index as $key => $hotel){
+            echo "<b>$key : </b>";
+            echo "$hotel <br>";
+        }
+    }*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,16 +57,14 @@ $hotels = [
     <title>Hotel</title>
 </head>
 <body>
+    <?php  foreach($hotels as $index) : ?>
+        
     <ul>
-        <?php foreach($hotels as $index){
-            echo "<hr>";
-            foreach($index as $key => $hotel){
-                echo "<b>$key : </b>";
-                echo "$hotel <br>";
-            }
-        }
-        ?>
+        <?php foreach($index as $key => $hotel) : ?>
+            <li><b><?= $key ?>: </b><?= $hotel?></li>
+            <?php endforeach ?>
     </ul>
+    <?php endforeach ?>
     
 </body>
 </html>
